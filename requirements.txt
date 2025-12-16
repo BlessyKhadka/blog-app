@@ -13,8 +13,7 @@ mypy_extensions==1.1.0
 packaging==25.0
 pathspec==0.12.1
 platformdirs==4.4.0
-psycopg==3.1.8
-psycopg-binary==3.1.8
+psycopg==3.2.13
 python-dotenv==1.2.1
 pytokens==0.3.0
 sqlparse==0.5.4

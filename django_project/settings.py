@@ -25,17 +25,10 @@ SECRET_KEY = "django-insecure-b_e10sst=_j#1(ga0to3tla&d-7y7z035)@8)c6=_7y+ag!sl$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "blog-app-pre6.onrender.com",
-    ".onrender.com",
-    "localhost",
-    "127.0.0.1",
-]
+ALLOWED_HOSTS = ["blog-app-pre6.onrender.com", "localhost", "127.0.0.1"]
+CSRF_TRUSTED_ORIGINS = ["https://blog-app-pre6.onrender.com"]
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://blog-app-pre6.onrender.com",
-    "https://*.onrender.com",
-]
+
 
 
 
@@ -53,6 +46,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -128,7 +122,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
-STATICFILES_DIRS = [BASE_DIR / "static"]
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
+
 
 
 # Default primary key field type

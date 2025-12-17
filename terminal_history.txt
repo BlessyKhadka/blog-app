@@ -1,0 +1,16 @@
+  234  cat .gitignore\n
+  235  git status\n
+  236  git add -A\n
+  237  git commit -m "initial commit"\n
+  238  [main (root-commit)] initial commit\n X files changed\n
+  239  git status\n
+  240  git remote add originhttps://github.com/BlessyKhadka/blog-app.git
+  241  git remote add origin https://github.com/BlessyKhadka/blog-app.git
+  242  git remote -v\n
+  243  git branch -M main\ngit push -u origin main\n
+  244  touch README.md\n
+  245  \npwd\n
+  246  git status\n
+  247  git add README.md\n
+  248  git commit -m "add README"\n
+  249  git push\n
